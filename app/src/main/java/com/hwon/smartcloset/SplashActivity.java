@@ -2,7 +2,6 @@ package com.hwon.smartcloset;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 
 import android.os.Handler;
@@ -20,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
         hd.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplication(), MainActivity.class));
+                startActivity(new Intent(getApplication(), IntroActivity.class));
                 SplashActivity.this.finish();
             }
         }, 3000);
