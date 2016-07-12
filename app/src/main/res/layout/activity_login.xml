@@ -1,13 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hwon.smartcloset.LoginActivity">
+    tools:context="com.hwon.smartcloset.LoginActivity"
+    android:orientation="vertical">
 
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/toolbar_main"/>
 
-</RelativeLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-MAIL"
+                android:textSize="@dimen/text_size"
+                android:id="@+id/textView"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/et_login_email"
+                android:layout_column="1"
+                android:layout_weight="2"
+                android:hint="example@gmail.com"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호"
+                android:textSize="@dimen/text_size"
+                android:id="@+id/textView2"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/et_login_pwd"
+                android:layout_column="1"
+                android:layout_weight="2"
+                android:hint="*******"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="@dimen/text_size"
+        android:id="@+id/btn_login_login"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickLogin"/>
+</LinearLayout>
