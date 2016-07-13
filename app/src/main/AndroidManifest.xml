@@ -17,15 +17,15 @@
         android:theme="@style/AppTheme">
 
         <!-- No Action Bar! I'll use Toolbar! -->
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SplashActivity">
-
+        <activity android:name=".MainActivity">
             <!-- 처음 실행하는 Activity 설정 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".SplashActivity">
         </activity>
         <activity android:name=".IntroActivity" />
         <activity android:name=".LoginActivity" />

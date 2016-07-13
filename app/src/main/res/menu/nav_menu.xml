@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/drawer_home" android:icon="@mipmap/ic_home_white"
+            android:title="홈" />
+        <item android:id="@+id/drawer_closet" android:icon="@android:drawable/ic_menu_gallery"
+            android:title="내 옷장" />
+        <item android:id="@+id/drawer_people" android:icon="@android:drawable/ic_menu_slideshow"
+            android:title="패션 피플" />
+        <item android:id="@+id/drawer_inform" android:icon="@android:drawable/ic_menu_manage"
+            android:title="정보" />
+        <item android:id="@+id/drawer_setting" android:icon="@android:drawable/ic_menu_manage"
+            android:title="설정" />
+    </group>
+</menu>
