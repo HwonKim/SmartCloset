@@ -3,10 +3,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.hwon.smartcloset.HomeFragment">
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home" />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#5f5f5f"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#5f5f5f">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/launcher"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="당신의 패션 감각을 뽐내보세요!"
+                        android:textSize="@dimen/text_size"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="코디"
+                        android:drawableLeft="@drawable/edit"
+                        android:drawablePadding="10dp"
+                        android:paddingLeft="60dp"
+                        android:layout_weight="1"
+                        android:background="#5f5f5f"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:textSize="@dimen/small_text_size" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="사진"
+                        android:drawableLeft="@drawable/camera"
+                        android:drawablePadding="10dp"
+                        android:paddingLeft="60dp"
+                        android:layout_weight="1"
+                        android:background="#5f5f5f"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:textSize="@dimen/small_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_view"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </FrameLayout>
