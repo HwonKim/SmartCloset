@@ -16,17 +16,17 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    final int ITEM_SIZE = 3;
+    final int ITEM_SIZE = 6;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_home, container, false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.recycle_view);
-        recyclerView.setHasFixedSize(true);
+        private RecyclerView.LayoutManager layoutManager;
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                Bundle savedInstanceState) {
+            View v = inflater.inflate(R.layout.fragment_home, container, false);
+            recyclerView = (RecyclerView) v.findViewById(R.id.recycle_view);
+            recyclerView.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
@@ -37,6 +37,9 @@ public class HomeFragment extends Fragment {
         cardItem[0] = new CardItem(R.drawable.one, "#one");
         cardItem[1] = new CardItem(R.drawable.two, "#two");
         cardItem[2] = new CardItem(R.drawable.three, "#three");
+        cardItem[3] = new CardItem(R.drawable.four, "#four");
+        cardItem[4] = new CardItem(R.drawable.five, "#five");
+        cardItem[5] = new CardItem(R.drawable.six, "#six");
 
         for(int i = 0; i < ITEM_SIZE; i++){
             cardItemList.add(cardItem[i]);
