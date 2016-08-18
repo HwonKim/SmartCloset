@@ -1,6 +1,7 @@
 package com.hwon.smartcloset;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
@@ -62,7 +63,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             ((HeaderViewHolder) holder).btnCodi.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context, "Codi Btn Clicked", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context, WritePostActivity.class);
+                    context.startActivity(intent);
                 }
             });
 
